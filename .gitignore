@@ -34,3 +34,5 @@ vendor/
 
 # Dependency directories
 Godeps/
+
+.env

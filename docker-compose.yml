@@ -5,8 +5,8 @@ services:
     container_name: go-app
     image: yurisalesc/go-app:1.0.0
     build: .
-    environment:
-      DATABASE_URL: "host=go_db user=postgres password=postgres dbname=go_db sslmode=disable"
+    env_file:
+      - .env
     ports:
       - "8000:8000"
     depends_on:
