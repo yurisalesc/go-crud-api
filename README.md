@@ -76,6 +76,24 @@ curl -X PUT http://localhost:8080/users/1 -H "Content-Type: application/json" -d
 curl -X DELETE http://localhost:8080/users/1
 ```
 
+## Running with Docker and Docker Compose
+
+To run this project using Docker and Docker Compose, follow these steps:
+
+1. Ensure you have Docker and Docker Compose installed on your machine.
+
+2. Create a `.env` file in the root of your project with the following content:
+    ```env
+    DATABASE_URL=host=localhost user=youruser password=yourpass dbname=yourdb sslmode=disable
+    ```
+
+3. Build and start the containers using Docker Compose:
+    ```sh
+    docker-compose up --build
+    ```
+
+4. The API will be available at `http://localhost:8000`.
+
 ## Acknowledgements
 
 This project was created based on the code from the [go-crud-live](https://github.com/FrancescoXX/go-crud-live) repository. Special thanks to [FrancescoXX](https://github.com/FrancescoXX/) for the sharing his knowledge.
